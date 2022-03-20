@@ -1,0 +1,348 @@
+@font-face {
+  font-display: fallback;
+  font-family: "LL Circular";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://fonts.ritual.com/Circular/Book/css/fonts/lineto-circular-book.woff2")
+      format("woff2"),
+    url("https://fonts.ritual.com/Circular/Book/css/fonts/lineto-circular-book.woff")
+      format("woff");
+}
+@font-face {
+  font-display: fallback;
+  font-family: "LL Circular";
+  font-weight: 300;
+  font-style: italic;
+  src: url("https://fonts.ritual.com/Circular/BookItalic/css/fonts/lineto-circular-bookItalic.woff2")
+      format("woff2"),
+    url("https://fonts.ritual.com/Circular/BookItalic/css/fonts/lineto-circular-bookItalic.woff")
+      format("woff");
+}
+@font-face {
+  font-display: fallback;
+  font-family: "LL Circular";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://fonts.ritual.com/Circular/Medium/css/fonts/lineto-circular-medium.woff2")
+      format("woff2"),
+    url("https://fonts.ritual.com/Circular/Medium/css/fonts/lineto-circular-medium.woff")
+      format("woff");
+}
+@font-face {
+  font-display: fallback;
+  font-family: "LL Circular";
+  font-weight: 500;
+  font-style: italic;
+  src: url("https://fonts.ritual.com/Circular/MediumItalic/css/fonts/lineto-circular-mediumItalic.woff2")
+      format("woff2"),
+    url("https://fonts.ritual.com/Circular/MediumItalic/css/fonts/lineto-circular-mediumItalic.woff")
+      format("woff");
+}
+@font-face {
+  font-display: fallback;
+  font-family: "LL Circular";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://fonts.ritual.com/Circular/Bold/css/fonts/lineto-circular-bold.woff2")
+      format("woff2"),
+    url("https://fonts.ritual.com/Circular/Bold/css/fonts/lineto-circular-bold.woff")
+      format("woff");
+}
+@font-face {
+  font-display: fallback;
+  font-family: "Dutch801";
+  font-weight: normal;
+  font-style: normal;
+  src: url("https://fonts.ritual.com/Dutch801/webfonts/3653C9_0_0.woff2")
+      format("woff2"),
+    url("https://fonts.ritual.com/Dutch801/webfonts/3653C9_0_0.woff")
+      format("woff");
+}
+@font-face {
+  font-display: fallback;
+  font-family: "Dutch801";
+  font-weight: normal;
+  font-style: italic;
+  src: url("https://fonts.ritual.com/Dutch801/webfonts/3653C9_1_0.woff2")
+      format("woff2"),
+    url("https://fonts.ritual.com/Dutch801/webfonts/3653C9_1_0.woff")
+      format("woff");
+}
+body {
+  color: rgb(20, 43, 111);
+  font-size: 18px;
+  font-family: LL Circular;
+}
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+h2 {
+  font-size: 3.5em;
+  margin-bottom: 0;
+}
+h3 {
+  font-size: 2em;
+}
+em, i {
+  font-family: "Dutch801";
+  font-weight: 300;
+}
+a, a:active, a:visited {
+  color: rgb(20, 32, 111);
+}
+hr {
+  border-color: rgb(20, 43, 111);
+}
+.container {
+  margin: auto auto 4em;
+  width: 95%;
+}
+header {
+  padding: 2em;
+  grid-area: header;
+}
+section {
+  padding: 1em;
+  grid-area: content;
+}
+input {
+  padding: .5em .75em;
+  box-sizing: border-box;
+  width: 60%;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #14206f;
+}
+input:not([type='file']) {
+  background: #eeeeee;
+  border: 1px solid rgb(20, 43, 111);
+}
+input[type=submit] {
+  background: #14206f;
+  border: 0;
+  color: white;
+  padding: .75em 1.5em;
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: .75px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 45%;
+  margin-right: 7%;
+}
+input::placeholder {
+  font-style: italic;
+  color: #14206f;;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.sidebar > div {
+  border-right: 1px solid rgb(20, 43, 111);
+}
+.list-item {
+  display: block;
+  position: relative;
+  padding: 1.25em 4em 3em 1em;
+  border-style: solid;
+  border-width: 0 0 0 0;
+  border-color: white rgb(20, 43, 111) white white;
+  box-sizing: border-box;
+  line-height: 1em;
+  text-decoration: none;
+  transition: color 0.2s ease 0s, background-color 0.2s ease 0s, border 0.1s ease 0s;
+  border-radius: 10px 0 0 10px;
+}
+
+.list-item.list-item--addnew {
+  color: #acacc4;
+  margin: 0;
+  padding: 0;
+  line-height: 100px;
+  text-align: center;
+}
+
+.list-item.list-item--addnew::after {
+  content: none;
+}
+
+.list-item > div {
+  padding-left: .65em;
+}
+
+.list-item::after {
+  display: block;
+  position: absolute;
+  content: ' ';
+  right: 0;
+  width: 95%;
+  height: 1px;
+  bottom: -1px;
+  background: rgb(20, 43, 111);
+}
+.list-item:hover, .list-item.list-item--currentItem {
+  background: rgb(20, 43, 111);
+}
+
+.list-item:hover::after, .list-item.list-item--currentItem::after {
+  display: none;
+  height: 0;
+}
+.list-item:hover, .list-item:hover *, .list-item--currentItem, .list-item--currentItem * {
+  color: white;
+}
+.list-item:hover .list-item__arrow, .list-item:hover .plus-icon {
+  background: white;
+}
+.list-item:hover .list-item__arrow, .list-item--currentItem .list-item__arrow {
+  background:white;
+  right: 4.5%;
+}
+.list-item__name {
+  font-size: 1.85em;
+  font-weight: bold;
+  margin-bottom: .35em;
+}
+.list-item__dosage {
+  color: #acacc4;
+  font-size: .85em;
+  font-weight: bold;
+  letter-spacing: .65px;
+}
+.list-item__location {
+  position: absolute;
+  bottom: 1em;
+  font-size: small;
+}
+.list-item__arrow {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  height: 30px;
+  width: 10px;
+  background-color: rgb(20, 43, 111);
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  transform: translateY(-50%);  color: white;
+  transition: right 0.3s ease-in-out;
+}
+.plus-icon {
+  display: inline-block;
+  margin-right: .5em;
+  background: #acacc4;
+  width: 23px;
+  height: 23px;
+  vertical-align: middle;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+}
+.form-control {
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.form-control label {
+  font-weight: bold;
+}
+.search {
+  width: 100%;
+  display: inline-block;
+  border-right: 1px solid white;
+  position: relative;
+}
+.search input {
+  margin: auto 1em;
+  display: block;
+  width: 89%;
+  margin-bottom: 1em;
+  text-align: right;
+  color: rgb(20, 43, 111);
+}
+.ingredient-detail__header {
+  display: inline-flex;
+}
+.ingredient-detail__image {
+  width: 30%;
+  height: auto;
+  align-self: center;
+  border-radius: 100%;
+}
+.ingredient-detail__description {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.ingredient-detail__list span {
+  margin-bottom: .75em;
+  display: block;
+}
+.ingredient-detail__list strong {
+  font-weight: 600;
+  margin-right: 1em;
+}
+.ingredient-detail__list em {
+  font-weight: 300;
+}
+.articles {
+  position: relative;
+  margin-top: 2em;
+  padding: 0 3em;
+  min-height: 250px;
+  text-align: center;
+}
+.slide {
+  display: none;
+}
+.slide.currentSlide {
+  display: block;
+}
+.articles a {
+  cursor: pointer;
+}
+.articles a img {
+  width: 15px;
+  padding: 5px;
+}
+.prev {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+}
+.next {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+}
+@media (max-width: 599px) {
+  body {
+    font-size: 14px;
+  }
+  .list-item--addnew {
+    line-height: 75px;
+    margin-bottom: 2em;
+  }
+  .ingredient-detail__header {
+    display: block;
+    text-align: center;
+  }
+}
+@media (min-width: 600px) {
+  .container {
+    display: grid;
+    max-width:  950px;
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar";
+    grid-template-columns: 30fr 70fr;
+    grid-template-areas:
+      "header  header"
+      "sidebar content";
+  }
+  section {
+    padding: 1em 2em;
+  }
+  .ingredient-detail__image {
+    margin-right: 1.5em;
+  }
+}
