@@ -327,7 +327,7 @@ input::placeholder {
   right: 5px;
   top: 50%;
 }
-@media (max-width: 599px) {
+@media (max-width: 709px) {
   body {
     font-size: 14px;
   }
@@ -340,10 +340,10 @@ input::placeholder {
     text-align: center;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 710px) {
   .container {
     display: grid;
-    max-width:  950px;
+    max-width:  1100px;
     grid-template-areas:
       "header"
       "content"
@@ -353,10 +353,18 @@ input::placeholder {
       "header  header"
       "sidebar content";
   }
+  .ingredient-detail__list {
+    margin-bottom: 5em;
+  }
   section {
-    padding: 1em 2em;
+    padding: 1em 3.5em;
   }
   .ingredient-detail__image {
     margin-right: 1.5em;
+  }
+}
+@media (max-width: 840px) {
+  .ingredient-detail__header {
+    display: block;
   }
 }
