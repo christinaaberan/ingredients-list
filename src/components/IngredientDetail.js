@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const IngredientDetail = ({ currentItem, removeItem }) => {
 	const [slideIndex, setSlideIndex] = useState(0);
@@ -6,6 +6,10 @@ const IngredientDetail = ({ currentItem, removeItem }) => {
 		e.preventDefault();
 		fn(i);
 	};
+
+	useEffect(() => {
+		setSlideIndex(0);
+	},[currentItem]);
 
 	const plusSlides = (n) => {
 		let slides = currentItem.articles;
@@ -70,7 +74,7 @@ const IngredientDetail = ({ currentItem, removeItem }) => {
 								key={key}
 							>
 								<p key={key}>
-									<a href={item.link}>{item.title}</a>
+									<a href={item.link} target="_blank" rel="noreferrer noopener">{item.title}</a>
 									<br />
 									<br />
 									<i>

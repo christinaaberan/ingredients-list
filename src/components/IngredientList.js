@@ -26,7 +26,7 @@ const IngredientList = (props) => {
 
 	return (
 		<div>
-			<div className="search">
+			<div id="sidebar-search" className="search">
 				<input type="text" name="search" placeholder="Search" onChange={handleChange} />
 			</div>
 			{filteredList.map((item, key) => (
@@ -57,8 +57,8 @@ const IngredientList = (props) => {
 			<>
 				<a
 					href="#"
-					onClick={() => props.viewForm(true)}
-					className={`list-item list-item--addnew ${props.showForm ? 'currentItem' : ''}`}
+					onClick={(e) => onClick(props.viewForm, true, e)}
+					className={`list-item list-item--addnew ${props.viewForm ? 'currentItem' : ''}`}
 				>
 					<span
 						className="plus-icon"
@@ -76,17 +76,17 @@ const IngredientList = (props) => {
 	);
 };
 
-export function ListItem(props) {
+const ListItem = (props) => {
 	return (
 		<>
-			<div className={'list-item__name'}>
+			<div className="list-item__name">
 				<span>{props.info.name}</span>
 			</div>
-			<div className={'list-item__dosage'}>
+			<div className="list-item__dosage">
 				<span>{props.info.dosage}</span>
 			</div>
-			<div className={'list-item__location'}>
-				<span>{props.info.location}</span>
+			<div className="list-item__location">
+				<span><span style={{maskImage: 'url(assets/location.svg)', WebkitMaskImage: 'url(assets/location.svg)'}}></span>{props.info.location}</span>
 			</div>
 		</>
 	);
