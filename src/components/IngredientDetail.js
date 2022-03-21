@@ -49,7 +49,7 @@ const IngredientDetail = ({ currentItem, removeItem }) => {
 					<br />
 				</span>
 				<span>
-					<strong>Supplier</strong> <em>{currentItem.foundIn}</em>
+					<strong>Supplier</strong> <em>{currentItem.supplier}</em>
 					<br />
 				</span>
 				<span>

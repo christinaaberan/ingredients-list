@@ -87,6 +87,7 @@ h3 {
 em, i {
   font-family: "Dutch801";
   font-weight: 300;
+  letter-spacing: .25px;
 }
 a, a:active, a:visited {
   color: rgb(20, 32, 111);
@@ -286,6 +287,9 @@ input::placeholder {
   font-size: 1.3em;
   font-weight: 600;
 }
+.ingredient-detail__list {
+  font-size: 1.05em;
+}
 .ingredient-detail__list span {
   margin-bottom: .75em;
   display: block;
@@ -364,6 +368,9 @@ input::placeholder {
   }
 }
 @media (max-width: 840px) {
+  h2 {
+    font-size: 3em;
+  }
   .ingredient-detail__header {
     display: block;
   }
