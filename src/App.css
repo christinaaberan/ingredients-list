@@ -189,7 +189,7 @@ input::placeholder {
   display: none;
   height: 0;
 }
-.list-item:hover, .list-item:hover *, .list-item--currentItem, .list-item--currentItem * {
+.list-item:hover, .list-item:hover *, .list-item--currentItem, .list-item--currentItem *,  .list-item--addnew .list-item--currentItem * {
   color: white;
 }
 .list-item:hover .list-item__arrow, .list-item:hover .plus-icon {

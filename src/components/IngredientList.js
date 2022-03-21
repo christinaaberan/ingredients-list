@@ -58,7 +58,7 @@ const IngredientList = (props) => {
 				<a
 					href="#"
 					onClick={(e) => onClick(props.viewForm, true, e)}
-					className={`list-item list-item--addnew ${props.viewForm ? 'currentItem' : ''}`}
+					className={`list-item list-item--addnew ${props.showForm ? 'list-item--currentItem' : ''}`}
 				>
 					<span
 						className="plus-icon"
